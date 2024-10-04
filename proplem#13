@@ -1,0 +1,44 @@
+
+#include<iostream>
+#include<string>
+using namespace std;
+void Readnumpers(int& num1, int& num2,int&num3)
+{
+	cout << "pless Enter num1" << endl;
+	cin >> num1;
+	cout << "pless Enter num2" << endl;
+	cin >> num2;
+	cout << "pless Enter num3 " << endl;
+	cin >> num3;
+
+}
+int max3numpers(int num1, int num2,int num3)
+{
+	if (num1 > num2)
+		if (num1 > num3)
+			return num1;
+		else
+			return num3;
+	else
+
+	if (num2 > num3)
+		return num2;
+	else
+		return num3;
+		
+
+
+		
+	
+}
+void printReseltmax(int max)
+{
+	cout << "Themax=" << max << endl;
+}
+int main()
+{
+	int num1, num2, num3;
+	Readnumpers(num1, num2,num3);
+	printReseltmax(max3numpers(num1, num2,num3));
+	return 0;
+}
