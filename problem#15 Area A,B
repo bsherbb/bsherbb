@@ -1,0 +1,27 @@
+#include<iostream>
+#include<string>
+using namespace std;
+void Readnumpers(float& A, float& B)
+{
+	cout << "pless Enter numpers A ?" << endl;
+	cin >> A;
+	cout << "pless Enter numpers B ?" << endl;
+	cin >> B;
+}
+float clcetArea(float A, float B)
+{
+	
+	return   A * B;
+	  
+}
+void printResult(float Area)
+{
+	cout << "the Area=" << Area << endl;
+}
+int main()
+{
+	float A, B;
+	Readnumpers(A, B);
+	printResult(clcetArea(A, B));
+
+}
