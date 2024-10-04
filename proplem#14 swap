@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+void Readnumpers(int& num1, int& num2)
+{
+	cout << "pless enter num1" << endl;
+	cin >> num1;
+	cout << "pless enter num2" << endl;
+	cin >> num2;
+}
+void swapnumpers(int& A, int& B)
+{
+	int temp;
+	temp = A;
+	A = B;
+	B = temp;
+
+}
+void printnumpers(int& num1, int& num2)
+{
+	cout << num1 << endl;
+	cout << num2 << endl;
+}
+int main()
+{
+	int num1, num2;
+	Readnumpers(num1, num2);
+	printnumpers(num1, num2);
+	swapnumpers(num1, num2);
+	printnumpers(num1, num2);
+	return 0;
+}
