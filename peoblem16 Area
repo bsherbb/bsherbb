@@ -1,0 +1,25 @@
+#include<string>
+using namespace std;
+void Readnumpers(float& A, float& d)
+{
+	cout << "pless Enter numpers A ?" << endl;
+	cin >> A;
+	cout << "pless Enter numpers d ?" << endl;
+	cin >> d;
+}
+float clcetnumpersArea(float A, float d)
+{
+	float Area = A * sqrt (pow(d , 2) - pow(A,2));
+	return Area;
+}
+void printRuseltArea(float Area)
+{
+	cout << "the Area =" << Area << endl;
+}
+int main()
+{
+	float A, d;
+	Readnumpers(A, d);
+	printRuseltArea(clcetnumpersArea(A, d));
+	return 0;
+}
