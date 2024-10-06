@@ -1,0 +1,28 @@
+#include<iostream>
+#include<string>
+using namespace std;
+void Readnumpers(float&r)
+{
+	cout << "pless enter numpers r" << endl;
+	cin >> r;
+	
+
+}
+float clcletArea(float r)
+{
+	float pI = 3.141592653589793238;
+	float Area = pow(r, 2) * pI;
+	return Area;
+	
+}
+void printArea(float Area)
+{
+	cout << "the Area" << Area << endl;
+}
+int main()
+{
+	float r;
+	Readnumpers(r);
+	printArea(clcletArea(r));
+	return 0;
+}
