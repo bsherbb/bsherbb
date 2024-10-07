@@ -1,0 +1,41 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int ReadAeg()
+{
+	int Aeg;
+	cout << "How old daryou " << endl;
+	cin >> Aeg;
+	return Aeg;
+	
+}
+bool rengAeg(int numpers,int from,int to)
+{
+	return(numpers >= from && numpers <= to);
+}
+int Rengbtwen(int from, int to)
+{
+	int Aeg = 0;
+	do
+	{
+
+		Aeg = ReadAeg();
+
+
+	} while (!rengAeg(Aeg, from, to));
+	return Aeg;
+}
+void prinrRuselt(int Aeg)
+{
+	cout << "Your Aeg is" << Aeg << endl;
+}
+	
+int main()
+{
+	prinrRuselt(Rengbtwen(18, 45));
+	
+
+
+	return 0;
+}
+	
