@@ -1,0 +1,36 @@
+#include<iostream>
+#include<string>
+using namespace std;
+void Readn3umpers(float& A, float& B, float& C)
+{
+	cout << "pless Enter A" << endl;
+	cin >> A;
+	cout << "pless Enter numper B" << endl;
+	cin >> B;
+	cout << "pless Enter numpers C" << endl;
+	cin >> C;
+
+}
+float clcletAreatringl(float A, float B, float C)
+{
+	const float pI = 3.141592653589793238;
+	float p;
+	p = (A + B + C) / 2;
+	float T = (A * B * C) / (4 * sqrt(p * (p - A) * (p -B ) * (p - C)));
+	float Area = pI * pow(T, 2);
+	return Area;
+}
+void printArea(float Area)
+{
+	cout << "the Area =" << Area << endl;
+}
+int main()
+{
+	float A, B, C;
+	Readn3umpers(A, B, C);
+	printArea(clcletAreatringl(A, B, C));
+	return 0;
+
+
+
+}
