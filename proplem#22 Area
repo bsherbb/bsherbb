@@ -1,0 +1,29 @@
+#include<iostream>
+#include<string>
+using namespace std;
+void Readnumpers(float& A, float& B)
+{
+	cout << "pless Enter numpers A" << endl;
+	cin >> A;
+	cout << "pless Enter numpers B" << endl;
+	cin >> B;
+}
+float clcletRuseltArea(float A, float B)
+{
+	float const pI = 3.141592653589793238;
+	float Area = pI * (pow(B, 2) / 4) * ((2 * A - B) / (2 * A + B));
+	return Area;
+}
+void printArea(float Area)
+{
+	cout << "the Area =" << Area << endl;
+ }
+int main()
+{
+	float A, B;
+	Readnumpers(A, B);
+	printArea(clcletRuseltArea(A, B));
+	return 0;
+}
+
+
