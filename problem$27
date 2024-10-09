@@ -1,0 +1,31 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int ReadnumpersN()
+{
+	int N;
+	cout << "pless Enter N" << endl;
+	cin >> N;
+	return N;
+}
+void printNusingforloop(int N)
+{
+	int conter = 0;
+	for ( conter = N; conter>=1; conter--)
+	{
+		cout << conter << endl;
+	}
+
+}  
+
+
+int main()
+{
+	int N = ReadnumpersN();
+	printNusingforloop(N);
+	
+
+	return 0;
+
+
+}
