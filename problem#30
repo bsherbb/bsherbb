@@ -1,0 +1,31 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int Readnumpers(string maseg)
+{
+	int numpers;
+	cout << maseg << endl;
+	cin >> numpers;
+	return numpers;
+}
+int printfactoleal(int N)
+{
+	int conter = 0;
+	int f = 1;
+	for (conter = N; conter >= 1; conter--)
+	{
+		f= f* conter;
+	}
+	return f;
+}
+int main()
+{
+	cout << printfactoleal(Readnumpers("pless Enter numper ???"));
+
+
+
+
+	return 0;
+
+
+}
