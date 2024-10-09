@@ -1,0 +1,47 @@
+#include<iostream>
+#include<string>
+using namespace std;
+enum enoodandeveen{even=2,odd=1};
+int Readnumpers()
+{
+	int Numper;
+	cout << "pless Enter numpers Numper" << endl;
+	cin >> Numper;
+	return Numper;
+}
+enoodandeveen cheKoodeven(int numper)
+{
+	if (numper % 2 != 0)
+
+		return  enoodandeveen::odd;
+
+	else
+
+		return  enoodandeveen::even;
+	
+	
+}
+int printnumpersusingfoorloop(int N)
+{
+	int sum = 0;
+	for (int conter =1; conter <=N; conter++)
+	{
+		if (cheKoodeven(conter) == enoodandeveen::odd)
+		{
+			sum += conter;
+		}
+	
+	}
+	return sum;
+}
+int main()
+{
+	int N = Readnumpers();
+	cout << printnumpersusingfoorloop(N) << endl;
+
+	
+
+	return 0;
+
+
+}
