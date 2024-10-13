@@ -1,0 +1,39 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int Readtotelsels()
+{
+	int ToTelsels;
+	cout << "pless Enter ToTelsels" << endl;
+	cin >> ToTelsels;
+	return ToTelsels;
+}
+float Getmony(int ToTelsels)
+{
+	if (ToTelsels >= 1000000)
+		return 0.01;
+	else if (ToTelsels >= 500000)
+		return 0.02;
+	else if (ToTelsels >= 1000000)
+		return 0, 03;
+	else if (ToTelsels >= 50000)
+		return 0.05;
+	else
+		return 0.00;
+
+	return ToTelsels;
+}
+float clclet(float ToTelselse)
+{
+
+	return Getmony(ToTelselse) * ToTelselse;
+
+	return ToTelselse;
+}
+int main()
+{
+	int ToTelsels = Readtotelsels();
+	cout << endl << "Getmony =" << Getmony(ToTelsels) << endl;
+	cout << endl << "clclet =" << clclet(ToTelsels) << endl;
+	return 0;
+}
