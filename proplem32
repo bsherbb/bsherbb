@@ -1,0 +1,41 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int Readnumpers(int from, int to)
+{
+	int Gread;
+	do
+	{
+		cout << "pless Enter Gread" << endl;
+		cin >> Gread;
+
+	} while (Gread<from || Gread>to);
+
+	
+	return Gread;
+
+}
+char GreadLetletter(int Gread)
+{
+	if (Gread >= 90)
+		return'A';
+	else if (Gread >= 80)
+		return 'B';
+	else if (Gread >= 70)
+		return 'C';
+	else if (Gread >= 60)
+		return 'D';
+	else if (Gread >= 50)
+		return 'E';
+	else
+		return 'f';
+
+	return Gread;
+}
+int main()
+{
+
+	cout << endl<<"reuselt =" << GreadLetletter(Readnumpers(0,100 )) << endl;
+
+	return 0;
+}
