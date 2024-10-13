@@ -1,0 +1,40 @@
+#include<iostream>
+#include<string>
+using namespace std;
+struct stpinybenk
+{
+	int pennies, Nickels, Dims, Qurters, Dollers;
+
+};
+stpinybenk Readpine()
+
+{
+	stpinybenk binybenk;
+	cout << "pless Enter Pennies" << endl;
+	cin >> binybenk.pennies;
+	cout << "pless Enter NicKels" << endl;
+	cin >> binybenk.Nickels;
+	cout << "pless Enter Dims" << endl;
+	cin >> binybenk.Dims;
+	cout << "pless Enter Qurters" << endl;
+	cin >> binybenk.Qurters;
+	cout << "pless Enter Dollers" << endl;
+	cin >> binybenk.Dollers;
+	return binybenk;
+}
+int clcletbinybenk(stpinybenk binybenk)
+{
+	int totel = 0;
+	totel = binybenk.pennies * 1 + binybenk.Nickels * 5 + binybenk.Dims * 10 +
+		binybenk.Qurters * 25 + binybenk.Dollers * 100;
+
+	return totel;
+}
+int main()
+{
+	int totel = clcletbinybenk(Readpine());
+	cout << endl << "totel=" << totel << endl;
+	cout << endl << "totelDollers" << (float)totel / 100 << endl;
+
+	return 0;
+}
