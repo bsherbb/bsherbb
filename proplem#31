@@ -1,0 +1,43 @@
+using namespace std;
+int Readusernumper()
+{
+	int numper;
+	int m;
+	cout << "pless Enter numper" << endl;
+	cin >> numper;
+
+	return numper;
+}
+int  Readnumperm()
+{
+	int m;
+	cout << "pless Enter numper m" << endl;
+	cin >> m;
+
+	return m;
+}
+int   powernumpers(int numper, int m)
+{
+	if (m == 0)
+	{
+		return 1;
+	}
+	int p = 1;
+	for (int i = 1; i <= m; i++)
+	{
+		p = numper * m;
+	}
+	return p;
+		
+
+}
+int main()
+{
+	cout << endl << "ruselt =" << powernumpers(Readusernumper(), Readnumperm());
+
+	return 0;
+}
+
+
+
+	
