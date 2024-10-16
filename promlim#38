@@ -1,0 +1,55 @@
+#include<iostream>
+#include<string>
+using namespace std;
+enum enprimnumper { prim = 1, notprim = 2 };
+float Readnumper(string maseg)
+{
+	float numper = 0;
+	do
+	{
+		cout << maseg << endl;
+		cin >> numper;
+	} while (numper <= 0);
+
+	return numper;
+}
+enprimnumper cheknumper(int numper)
+{
+	int M = round (numper / 2);
+	for (int counter = 2; counter <= M; counter++)
+	{
+		if (numper % counter == 0)
+			return enprimnumper::notprim;
+	}
+
+	return enprimnumper::prim;
+
+}
+void printoptiontype(int numper)
+{
+	switch (cheknumper(numper))
+	{
+	case enprimnumper::prim:
+		cout << "the numper prim numper" << endl;
+		break;
+	case enprimnumper::notprim:
+		cout << "the numper not prim numper" << endl;
+		break;
+
+
+
+	}
+
+
+}
+int main()
+{
+	printoptiontype(Readnumper("pless Enter positive numper"));
+
+
+	return 0;
+
+
+
+
+}
