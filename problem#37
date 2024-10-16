@@ -1,0 +1,35 @@
+#include<iostream>
+#include<string>
+using namespace std;
+float Readnumpers(string maseg)
+{
+	int numper;
+	cout << maseg << endl;
+	cin >> numper;
+	return numper;
+}
+float sumnumper()
+{
+	int sum = 0, numper = 0, conter = 1;
+	do
+	{
+		numper = Readnumpers("pless Enter numper" + to_string(conter));
+
+		if (numper == -99)
+		{
+			break;
+		}
+		sum += numper;
+		conter++;
+	} while (numper =-99);
+	return sum;
+}
+int main()
+{
+
+	cout << endl << "Result=" << sumnumper() << endl;
+
+		return 0;
+
+
+}
