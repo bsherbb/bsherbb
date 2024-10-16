@@ -1,0 +1,48 @@
+#include<iostream>
+#include<string>
+using namespace std;
+enum optype{Add='+',sub='-',mul='*',Div='/' };
+float Readnumper(string maseg)
+{
+	float numper;
+	cout << maseg << endl;
+	cin >> numper;
+	return numper;
+
+}
+optype Readop()
+{
+	char OT;
+	cout << "pless Enter oprtype" << endl;
+	cin >> OT;
+	return (optype)OT;
+
+}
+float clcletpo(float numper1, float numper2, optype opt)
+{
+	switch (opt)
+	{
+	case optype::Add:
+		return numper1 + numper2;
+	case optype::sub:
+		return numper1 - numper2;
+	case optype::mul:
+		return numper1 * numper2;
+	case optype::Div:
+		return numper1 / numper2;
+	default:
+		numper1 + numper2;
+	}
+}
+int main()
+{
+	float numper1 = Readnumper("pless Enter the first numper");
+	float numper2 = Readnumper("pless Enter socond numper");
+
+	optype op= Readop();
+	cout << endl << clcletpo(numper1, numper2,op) << endl;
+	return 0;
+
+
+
+}
