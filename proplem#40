@@ -1,0 +1,46 @@
+#include<iostream>
+#include<string>
+using namespace std;
+float Readpositivenumper(string maseg)
+{
+	float numper;
+	do
+	{
+		cout << maseg << endl;
+		cin >> numper;
+
+
+	} while (numper <= 0);
+
+
+
+		return numper;
+
+	
+
+
+
+}
+float totalBillafterservicetax(float totalBill)
+{
+
+	totalBill = totalBill * 1.1;
+	totalBill = totalBill * 1.16;
+	return totalBill;
+
+
+}
+int main()
+{
+	float totalBill = Readpositivenumper("pless Enter total Bill");
+	cout << endl;
+	cout << endl << "totalBill=" << totalBill << endl;
+	cout << endl << "*****************************" << endl;
+	cout << "totalBillafterservicetax=" << totalBillafterservicetax(totalBill) << endl;
+
+
+	return 0;
+
+
+
+}
