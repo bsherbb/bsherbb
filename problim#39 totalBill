@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+float Readnumper(string maseg)
+{
+	float numper;
+	cout << maseg << endl;
+	cin >> numper;
+
+	return numper;
+
+
+}
+float clcletnumper(float totalBill, float totalcashpaid)
+{
+	return totalBill - totalcashpaid;
+}
+int main()
+{
+	float totalBill = Readnumper("pless Enter totalBill");
+	float totalcashpaid = Readnumper("pless Entwer totalcashpaid");
+	cout << endl << "totalBill=" << totalBill << endl;
+	cout << endl << "totalcashpaid" << totalcashpaid << endl;
+	cout << "*********************************" << endl;
+	cout << endl << "redurm=" << clcletnumper(totalBill, totalcashpaid) << endl;
+	
+	return 0;
+
+
+
+}
