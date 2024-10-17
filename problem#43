@@ -1,0 +1,49 @@
+#include<iostream>
+#include<string>
+using namespace std;
+struct sttaskDuirction
+{
+	float numperofDays, numperofHours, numperofminet, numperofsocond;
+};
+int Readnumperpositvice(string  maseg)
+{
+	short numper;
+	do
+	{
+		cout << maseg << endl;
+		cin >> numper;
+
+
+	} while (numper <= 0);
+		return numper;
+
+}
+sttaskDuirction ReadDuirction()
+{
+	sttaskDuirction taskDuirction;
+	taskDuirction.numperofDays = Readnumperpositvice("pless Enter numperofDays");
+	taskDuirction.numperofHours = Readnumperpositvice("pless Enterofnumper of Hours");
+	taskDuirction.numperofminet = Readnumperpositvice("pless Enter ofnumperminets");
+	taskDuirction.numperofsocond = Readnumperpositvice("pless Enter ofsocond");
+
+
+	return taskDuirction;
+}
+int taskscound(sttaskDuirction taskDuirction)
+{
+	int taskD = 0;
+	taskD = taskDuirction.numperofDays * 24 * 60 * 60;
+	taskD += taskDuirction.numperofHours * 60 * 60;
+	taskD += taskDuirction.numperofminet * 60;
+	taskD += taskDuirction.numperofsocond;
+
+	return taskD;
+}
+int main()
+{
+	cout << endl << "taskDurction=" << taskscound(ReadDuirction());
+	cout << endl;
+
+	return 0;
+}
+
