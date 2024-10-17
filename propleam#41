@@ -1,0 +1,48 @@
+#include<iostream>
+#include<string>
+using namespace std;
+float numperpositvies(string maseg)
+{
+	int numper;
+		do
+		{
+			cout << maseg << endl;
+			cin >> numper;
+
+
+		} while (numper <= 0);
+		return numper;
+
+}
+float Hoursofdays(float numperofDays)
+{
+	return (float)numperofDays / 24;
+
+}
+float Hoursofweeak(float numperofHours)
+{
+	return (float)numperofHours / 24 / 7;
+}
+float Daystoweeks(float numperofDays)
+{
+	return (float)numperofDays / 7;
+
+
+}
+int main()
+{
+	float numperofHours = numperpositvies("pless Enter numper Hours");
+	float numperofDays = Hoursofdays(numperofHours);
+	float numperofweeak = Daystoweeks(numperofDays);
+	cout << endl;
+	cout << "totalHours=" << numperofHours << endl;
+	cout << "totalofDays=" << numperofDays << endl;
+	cout << "totalofweeks=" <<Hoursofweeak(numperofHours) << endl;
+
+
+	return 0;
+
+
+
+
+}
