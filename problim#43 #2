@@ -1,0 +1,66 @@
+#include<iostream>
+#include<string>
+using namespace std;
+struct sttaskDuration
+{
+	int numperofDay, numperofHoures, numperofminet, numpersocond;
+
+};
+int Readpositivenumper(string maseg)
+{
+	int numper;
+	do
+	{
+		cout << maseg << endl;
+		cin >> numper;
+
+	} while (numper <= 0);
+	return numper;
+
+
+}
+sttaskDuration socoundtaskDuration(int totalDuration)
+{
+	sttaskDuration task;
+	int const socundperday = 24 * 60 * 60;
+	int const socundperHours = 60 * 60;
+	int const socundpermint = 60;
+
+	int Remndar = 0;
+	task.numperofDay = floor(totalDuration / socundperday);
+	Remndar = totalDuration % socundperday;
+	task.numperofHoures = floor(Remndar / socundperHours);
+	Remndar = Remndar % socundperHours;
+	task.numperofminet = floor(Remndar / socundpermint);
+	Remndar = Remndar % socundpermint;
+	task.numpersocond = Remndar;
+
+
+	return task;
+
+
+
+
+}
+void printtask(sttaskDuration task)
+{
+	cout << task.numperofDay << endl;
+	cout << task.numperofHoures << endl;
+	cout << task.numperofminet << endl;
+	cout << task.numpersocond << endl;
+
+
+}
+int main()
+{
+
+	int totalDuration = Readpositivenumper("pless Enter positiv numper");
+	printtask(socoundtaskDuration(totalDuration));
+
+
+	return 0;
+	
+
+
+
+}
