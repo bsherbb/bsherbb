@@ -1,0 +1,74 @@
+#include<iostream>
+#include<string>
+using namespace std;
+enum enmatheday{jun=1,fab=2,mar=3,Apr=4,may=5,Jun=6,Jul=7,Acst=8,sctmper=9,Qutoper=10,Nvomper=11,Das=12};
+int Readnumpermathday(string maseg, int from, int to)
+{
+	int numper;
+	{
+		cout << maseg << endl;
+		cin >> numper;
+
+	}while (numper<from || numper>to);
+	return numper;
+
+
+}
+enmatheday ReadRengmanth()
+{
+
+	return (enmatheday)Readnumpermathday("pless enter numper manthday jun=1,fab=2,mar=3,Apr=4,may=5,Jun=6,Jul=7,Acst=8,sctmper=9,Qutoper=10,Nvomper=11,Das=12 ", 1,12);
+
+}
+string printmanthday(enmatheday manth)
+{
+	switch (manth)
+	{
+	case enmatheday::jun:
+		return "junuerwe";
+	case enmatheday::fab:
+		return "fabril";
+		case enmatheday::mar:
+			return "maril";
+		case enmatheday::Apr:
+			return "April";
+		case enmatheday::may:
+			return "mayr";
+		case enmatheday::Jun:
+			return "Junwere";
+		case enmatheday::Jul:
+			return "Julrwere";
+		case enmatheday::Acst:
+			return "Acest";
+		case enmatheday::sctmper:
+			return "sctmper";
+		case enmatheday::Nvomper:
+			return "Nvomper";
+		case enmatheday::Das:
+			return "Dastemer";
+
+
+				
+		
+
+
+
+	}
+
+
+}
+int main()
+{
+
+
+	cout << printmanthday(ReadRengmanth()) << endl;
+
+
+
+	return 0;
+
+
+
+
+
+}
