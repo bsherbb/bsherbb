@@ -1,0 +1,37 @@
+#include<iostream>
+#include<string>
+using namespace std;
+float Readpostivenumper(string maseg)
+{
+	 float numper;
+	 do
+	 {
+		 cout << maseg << endl;
+		 cin >> numper;
+
+
+	 }while (numper <= 0);
+
+	 return numper;
+
+}
+float totelmanth(float Loanmonth, float monthlyin)
+{
+
+	return (float)  Loanmonth / monthlyin;
+		
+
+
+}
+int main()
+{
+
+	float Loanmonth = Readpostivenumper("pless  Enter Loanmonth");
+	float monthlyin = Readpostivenumper("pless Enter monthlyin");
+
+	cout << totelmanth(Loanmonth, monthlyin);
+	cout << endl;
+	return 0;
+
+
+}
