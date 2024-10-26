@@ -1,0 +1,62 @@
+#include<iostream>
+#include<string>
+using namespace std;
+enum enweekday{san=1,mon=2,tus=3,ther=4,wend=5,fri=6,satr=7};
+int ReadRengweekday(string maseg, int from, int to)
+{
+	int numper;
+	{
+		cout << maseg << endl;
+		cin >> numper;
+
+
+	}while (numper<from || numper>to);
+
+	return numper;
+}
+enweekday Readweekday()
+{
+	return (enweekday)ReadRengweekday("pless enter numpernu san=1 mon=2 tus=3 ther=4 wend=5 fri=6 satr=7",1,7);
+
+
+}
+string wekdays(enweekday day)
+{
+	switch (day)
+	{
+	case enweekday::san:
+		return "sunday";
+	case enweekday::mon:
+		return "monday";
+	case enweekday::tus:
+		return "tusday";
+	case enweekday::ther:
+		return "thersday";
+	case enweekday::wend:
+		return "wendsday";
+	case enweekday::fri:
+		return "friday";
+	case enweekday::satr:
+		return "satrday";
+
+
+		
+
+
+
+	}
+
+
+
+}
+int main()
+{
+
+	cout << wekdays(Readweekday()) << endl;
+
+
+	return 0;
+
+
+
+}
