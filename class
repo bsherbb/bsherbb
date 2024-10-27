@@ -1,0 +1,124 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+// تعريف فئة Student
+class Student {
+private:
+    string name;
+    int age;
+    float grade;
+
+public:
+    // الدالة المنشئة
+    Student(string name, int age, float grade) {
+        this->name = name;
+        this->age = age;
+        this->grade = grade;
+    }
+
+    // دالة لإرجاع تفاصيل الطالب
+    string getDetails() const {
+        return "Student Name: " + name + ", Age: " + to_string(age) + ", Grade: " + to_string(grade);
+    }
+
+    // دالة للتحقق مما إذا كان الطالب قد اجتاز
+    bool isPass() const {
+        return grade >= 50.0;
+    }
+
+    // دالة للحصول على اسم الطالب
+    string getName() const {
+        return name;
+    }
+};
+
+// فئة لإدارة قائمة الطلاب
+class StudentManager {
+private:
+    vector<Student> students;
+
+public:
+    // إضافة طالب جديد إلى القائمة
+    void addStudent(const string& name, int age, float grade) {
+        Student student(name, age, grade);
+        students.push_back(student);
+        cout << "Student " << name << " has been added successfully." << endl;
+    }
+
+    // عرض تفاصيل جميع الطلاب في القائمة
+    void showAllStudents() const {
+        if (students.empty()) {
+            cout << "No students available." << endl;
+        } else {
+            for (const auto& student : students) {
+                cout << student.getDetails() << endl;
+                cout << "Status: " << (student.isPass() ? "Passed" : "Failed") << endl;
+                cout << "------------------------------" << endl;
+            }
+        }
+    }
+
+    // البحث عن طالب باستخدام الاسم
+    const Student* findStudent(const string& name) const {
+        for (const auto& student : students) {
+            if (student.getName() == name) {
+                return &student;
+            }
+        }
+        return nullptr;
+    }
+};
+
+// البرنامج الرئيسي
+int main() {
+    StudentManager manager;
+    int choice;
+
+    do {
+        cout << "\nStudent Management System\n";
+        cout << "1. Add Student\n";
+        cout << "2. Show All Students\n";
+        cout << "3. Find Student\n";
+        cout << "4. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        if (choice == 1) {
+            string name;
+            int age;
+            float grade;
+            cout << "Enter student's name: ";
+            cin >> name;
+            cout << "Enter student's age: ";
+            cin >> age;
+            cout << "Enter student's grade: ";
+            cin >> grade;
+            manager.addStudent(name, age, grade);
+        }
+        else if (choice == 2) {
+            manager.showAllStudents();
+        }
+        else if (choice == 3) {
+            string name;
+            cout << "Enter the name of the student to find: ";
+            cin >> name;
+            const Student* student = manager.findStudent(name);
+            if (student) {
+                cout << student->getDetails() << endl;
+                cout << "Status: " << (student->isPass() ? "Passed" : "Failed") << endl;
+            } else {
+                cout << "Student not found." << endl;
+            }
+        }
+        else if (choice == 4) {
+            cout << "Exiting the program. Goodbye!" << endl;
+        }
+        else {
+            cout << "Invalid choice. Please try again." << endl;
+        }
+    } while (choice != 4);
+
+    return 0;
+}
