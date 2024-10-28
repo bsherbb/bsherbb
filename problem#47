@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+float Readpositivenumper(string maseg)
+{
+	int numper;
+	{
+		cout << maseg << endl;
+		cin >> numper;
+
+	}while (numper <= 0);
+	return numper;
+
+}
+float  ReadLanAmount(float LanAmoument, float motheds)
+{
+
+	return (float)LanAmoument / motheds;
+
+}
+int main()
+{
+	float LanAmoument = Readpositivenumper("pless Enter LanAmoument");
+	float motheds = Readpositivenumper("pless Enter motheds");
+	cout << ReadLanAmount(LanAmoument, motheds);
+	cout << endl;
+
+
+
+	return 0;
+
+
+
+
+
+}
