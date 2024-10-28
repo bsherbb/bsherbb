@@ -1,0 +1,47 @@
+#include<iostream>
+#include<string>
+using namespace std;
+string Readpincod()
+{
+	string  pincod;
+	cout << "pless Enter pincod \n";
+	cin >> pincod;
+
+	return pincod;
+
+
+}
+bool Login()
+{
+	string pincod;
+	do
+	{
+		pincod = Readpincod();
+		if (pincod == "1234")
+		{
+			return 1;
+		}
+
+		else
+		{
+			cout << "\nworgin\n";
+			system("color 4f");
+
+		}
+	} while (pincod != "1234");
+}
+int main()
+{
+
+	if (Login())
+	{
+		system("color 2f");
+		cout << "is rfg=" << 7500 << endl;
+
+	}
+
+
+	return 0;
+
+
+}
