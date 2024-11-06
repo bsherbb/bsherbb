@@ -1,0 +1,70 @@
+#include<iostream>
+#include<cmath>
+#include<string>
+using namespace std;
+enum primnotprim { prim = 1, notprim = 2 };
+int Readpositivenumper(string maseg)
+{
+	int numper;
+	do
+	{
+		cout << maseg << endl;
+		cin >> numper;
+
+	} while (numper <= 0);
+
+	return numper;
+}
+primnotprim chekprimnotprim(int numper)
+{
+	int m = round(numper / 2 );
+	for (int conter = 2; conter <= m; conter++)
+	{
+		if (numper % conter == 0)
+			return primnotprim::notprim;
+
+	}
+	return primnotprim::prim;
+
+
+		
+			
+}
+
+
+	
+
+
+void printprimnotprim1toN(int numper)
+{
+	cout << "\n";
+	cout << "print numper " << 1 << "to" << numper;
+	cout << "are" << endl;
+	for (int i = 1; i <= numper;i++)
+	{
+		if (chekprimnotprim(i) == primnotprim::prim)
+		{
+			cout << i << endl;
+
+		}
+		
+
+	}
+	
+	
+	
+}
+int main()
+{
+
+	
+
+	printprimnotprim1toN(Readpositivenumper("pless  Entyer positive numper"));
+
+
+
+
+	return 0;
+
+
+}
