@@ -1,0 +1,106 @@
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+
+int Readpostivenumper(string maseg)
+{
+	int numper;
+	do
+	{
+
+		cout << maseg << endl;
+		cin >> numper;
+
+
+
+
+	} while (numper <= 0);
+
+	return numper;
+
+
+}
+bool chekperfuct(int numper)
+{
+	int sum = 0;
+	for (int i = 1; i < numper; i++)
+	{
+		if (numper % i == 0)
+
+
+			sum += i;
+
+
+	}
+	return numper == sum;
+}
+
+
+
+
+
+
+	
+	
+void printperfuct(int numper)
+{
+	for (int i = 2; i <= numper; i++)
+	{
+
+
+		if (chekperfuct(i))
+		{
+
+			cout << i << endl;
+
+
+		}
+
+
+
+
+
+
+
+
+
+	}
+
+
+	
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int main()
+{
+
+
+	printperfuct(Readpostivenumper("Enter post numper"));
+
+
+	return 0;
+
+}
+
