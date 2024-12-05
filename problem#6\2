@@ -1,0 +1,49 @@
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+int Readpositvenumper(string maseg)
+{
+	int numper;
+	do
+	{
+		cout << maseg << endl;
+		cin >> numper;
+
+
+	} while (numper <= 0);
+
+
+	return numper;
+
+
+
+}
+int sumofDigit(int numper)
+{
+	int sum = 0, remender = 0;
+	
+	while (numper > 0)
+	{
+		remender = numper % 10;
+		numper = numper / 10;
+		sum = sum + remender;
+	}
+	return sum;
+}
+
+	int main()
+	{
+		
+		cout << "sumofDigit="
+			<< sumofDigit(Readpositvenumper("pless Enter positive numper"))
+			<< "\n";
+		
+	
+		return 0;
+
+
+	}
+
+
+
