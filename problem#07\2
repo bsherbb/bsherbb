@@ -1,0 +1,52 @@
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+int Readpositvenumper(string maseg)
+{
+	int numper;
+	do
+	{
+		cout << maseg << endl;
+		cin >> numper;
+
+
+	} while (numper <= 0);
+
+
+	return numper;
+
+
+
+}
+int sumofRefrins (int numper)
+{
+	int numper2 = 0, remender = 0;
+	
+	while (numper > 0)
+	{
+		remender = numper % 10;
+		numper = numper / 10;
+		numper2 = numper2 * 10 + remender;
+		
+	}
+	return numper2;
+}
+
+int main()
+{
+
+	cout << "revrenssis:"
+		<< sumofRefrins(Readpositvenumper("Readpositvenumper"))
+		<< "\n";
+		
+
+
+
+	return 0;
+}
+
+
+
+
+
