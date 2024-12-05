@@ -1,0 +1,48 @@
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+int Readpositvenumper(string maseg)
+{
+	int numper;
+	do
+	{
+		cout << maseg << endl;
+		cin >> numper;
+
+
+	} while (numper <= 0);
+
+
+	return numper;
+
+
+
+}
+void chickswap(int numper)
+{
+	while(numper>0)
+	{
+
+		int leng = numper % 10;
+		cout << leng << endl;
+		numper = numper / 10;
+
+
+	}
+
+}
+
+	int main()
+	{
+		
+
+		
+		chickswap(Readpositvenumper("pless enter positive numper"));
+		return 0;
+
+
+	}
+
+
+
