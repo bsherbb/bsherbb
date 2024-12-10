@@ -1,0 +1,71 @@
+#include<string>
+#include<cmath>
+using namespace std;
+int Readpositvenumper(string maseg)
+{
+	int numper;
+	
+	do
+	{
+		cout << maseg << endl;
+		cin >> numper;
+		
+		
+
+
+	} while (numper <= 0);
+
+
+	return numper;
+	
+
+
+}
+int  sumofRefrins (int numper,int diget)
+{
+	int remender, sum = 0, r = 0, m = 0;
+	
+	while (numper > 0)
+	{
+		remender = numper % 10;
+		numper = numper / 10;
+			if (remender == diget)
+				sum++;
+			
+	}
+	cout << sum;
+	return sum;
+	
+}
+void printdiget(int numper)
+{
+
+	for (int i = 0; i < 10; i++)
+	{
+
+		short diget = sumofRefrins(numper, i);
+
+		if (diget > 0)
+		{
+			cout << "Digit " << i << " Frequencey Is : "
+				<< diget << "fercncy" << endl;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+int main()
+{
+	int numper = Readpositvenumper("pless enter numper");
+	printdiget(numper);
+	
+	return 0;
+}
+	
+
