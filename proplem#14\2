@@ -1,0 +1,59 @@
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+int Readpositvenumper(string maseg)
+{
+	int numper;
+	
+	do
+	{
+		cout << maseg << endl;
+		cin >> numper;
+		
+		
+
+
+	} while (numper <= 0);
+
+
+	return numper;
+	
+
+
+}
+
+	
+
+void printnumper(int numper)
+{
+	
+	for (int i =numper; i >=1; i--)
+	{
+		for (int  j =1; j <=i; j++)
+		{
+			cout << char(i + 64);
+			
+		}
+		cout << "\n";
+	}
+	
+
+	
+	
+}
+
+
+
+
+
+
+
+int main()
+{
+	printnumper(Readpositvenumper("pless enter numper"));
+
+	return 0;
+}
+	
+
