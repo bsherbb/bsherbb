@@ -1,0 +1,73 @@
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+int Readpositvenumper(string maseg)
+{
+	int numper;
+	
+	do
+	{
+		cout << maseg << endl;
+		cin >> numper;
+		
+		
+
+
+	} while (numper <= 0);
+
+
+	return numper;
+	
+
+
+}
+int indegt(int numper)
+{
+	int sum = 0;
+	int remender = 0;
+	
+	while(numper>0)
+	{
+		remender = numper % 10;
+		numper = numper / 10;
+		
+		sum = sum * 10 + remender;
+		
+		
+		
+
+	}
+	
+	return sum;
+	
+}
+
+void printnumper(int numper)
+{
+	
+	if (numper==indegt(numper))
+
+
+		cout << "yes is proder";
+
+	else
+		cout << "no proder";
+
+	
+}
+
+
+
+
+
+
+
+int main()
+{
+	printnumper(Readpositvenumper("pless enter numper"));
+
+	return 0;
+}
+	
+
