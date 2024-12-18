@@ -1,0 +1,80 @@
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+int Readpositvenumper(string maseg)
+{
+	int numper;
+	
+	do
+	{
+		cout << maseg << endl;
+		cin >> numper;
+		
+		
+
+
+	} while (numper <= 0);
+
+
+	return numper;
+	
+
+
+}
+
+	
+
+void printwordtoAAAtozzz()
+{
+	cout << "\n";
+	string word = "";
+
+	for (int i = 65; i <= 90; i++)
+	{
+		for (int j = 65; j <=i; j++)
+		{
+			for (int b = 65; b <= 90; b++)
+			{
+				word = word + char(i);
+				word = word + char(j);
+				word = word + char(b);
+
+
+				cout << word << endl;
+
+
+				word = "";
+
+
+			}
+		}
+
+
+		cout << "\n_______________________________________________\n";
+
+
+	}
+
+
+	
+}
+	
+
+	
+	
+
+
+
+
+
+
+
+
+int main()
+{
+	printwordtoAAAtozzz();
+
+	return 0;
+}
+	
