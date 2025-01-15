@@ -1,0 +1,113 @@
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+string  ReadLeater()
+{
+	string  Leater;
+
+
+
+	cout << "Enter 3Leater after?????" << endl;
+	cin >> Leater;
+
+
+	
+	return Leater;
+}
+
+
+	
+bool  cheKispasord(string   Leater)
+{
+	string   word = "";
+	int conter = 0;
+	cout << "/n";
+	for (int i = 65; i <=90; i++)
+	{
+		
+		for (int j = 65; j <=90; j++)
+		{
+			
+			for (int k = 65; k <=90; k++)
+			{
+				conter++;
+				word = word + char(i);
+				word = word + char(j);
+				word = word + char(k);
+				
+
+				cout << "tial{" << conter << "}:";
+				cout << word << endl;
+				if (word == Leater)
+				{
+
+					cout << "\nPassword is " << word << "\n";
+					cout << "Found after ";
+					cout << conter << " Trial(s)\n";
+					return true;
+
+
+				}
+
+
+
+
+
+
+
+
+				word = "";
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+	}
+
+
+	
+
+	return 	false;
+
+
+
+}
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+int main()
+{
+	cheKispasord(ReadLeater());
+
+	return 0;
+}
+	
+
