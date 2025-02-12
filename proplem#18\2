@@ -1,0 +1,76 @@
+#include<iostream>
+#include<string>
+using namespace std;
+string Readtext()
+{
+	string text;
+	cout << "pless Enter text" << endl;
+	getline(cin, text);
+
+
+	return text;
+
+
+
+}
+
+string Encrpiontext(string text, short EncrpionKey)
+{
+
+	for (int i = 0; i <= text.length(); i++)
+	{
+
+		text[i] = char((int)text[i] + EncrpionKey);
+	}
+
+	return text;
+
+
+
+}
+
+string Decrpiontext(string text, short EncrpionKey)
+{
+
+	for (int i = 0; i <= text.length(); i++)
+	{
+
+		text[i] = char((int)text[i] - EncrpionKey);
+
+
+
+
+
+	}
+
+	return text;
+
+}
+int main()
+{
+
+
+	const short EncrpionKey = 2;/*this is Key*/
+
+	string text = Readtext();
+	string AfterEncrpionKey = Encrpiontext(text, EncrpionKey);
+	string AfterDecrpion = Decrpiontext(AfterEncrpionKey, EncrpionKey);
+
+
+	cout << "Text Befor Encripion=" << text << endl;
+	cout << "After Encrpiontext=" << AfterEncrpionKey << endl;
+	cout << "After Decrpion text=" << AfterDecrpion << endl;
+
+
+	return 0;
+
+
+
+
+
+
+
+
+
+
+}
