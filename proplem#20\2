@@ -1,0 +1,87 @@
+#include<iostream>
+#include<cstdlib>
+using namespace std;
+enum enGrtertib { smolllitter = 1,captellliter=2,sbshullcharcter=3,dijet=4 };
+int ReadRundom(int from, int to)
+{
+
+	/*funcion gnetor Rendom numper*/
+
+	int Rendom = rand() % (to - from + 1) + from;
+
+
+	return Rendom;
+
+
+
+
+
+
+
+
+}
+char getREndom(enGrtertib Grtertaip)
+{
+
+
+	switch (Grtertaip)
+	{
+
+	case enGrtertib::smolllitter:
+	{
+		return char(ReadRundom(97, 122));
+		break;
+	}
+
+	case enGrtertib::captellliter:
+	{
+		return char(ReadRundom(65, 90));
+		break;
+	}
+
+	case enGrtertib::sbshullcharcter:
+	{
+		return char(ReadRundom(33, 47));
+		break;
+	}
+	case enGrtertib::dijet:
+		return char (ReadRundom(48, 57));
+		break;
+	}
+
+
+
+
+
+
+
+
+
+
+}
+int main()
+{
+
+
+	srand((unsigned)time(NULL));
+
+	cout << getREndom(enGrtertib::captellliter) << endl;
+	cout << getREndom(enGrtertib::smolllitter) << endl;
+	cout << getREndom(enGrtertib::sbshullcharcter) << endl;
+	cout << getREndom(enGrtertib::dijet) << endl;
+
+
+
+
+
+	return 0;
+
+
+
+
+
+
+
+
+
+}
