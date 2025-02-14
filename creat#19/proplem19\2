@@ -1,0 +1,51 @@
+#include<iostream>
+#include<cstdlib>
+using namespace std;
+
+
+int ReadRundom(int from, int to)
+{
+
+	/*funcion gnetor Rendom numper*/
+
+	int Rendom = rand() % (to - from + 1) + from;
+
+
+	return Rendom;
+
+
+
+
+
+
+
+
+}
+
+
+
+	int main()
+	{
+
+
+		srand((unsigned)time(NULL));
+
+		cout << ReadRundom(1, 10) << endl;
+		cout << ReadRundom(1, 10) << endl;
+		cout << ReadRundom(1, 10) << endl;
+
+
+
+
+
+		return 0;
+}
+
+
+
+
+
+
+
+
+
