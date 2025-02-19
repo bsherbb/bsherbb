@@ -1,0 +1,98 @@
+#include<iostream>
+#include<cstdlib>
+using namespace std;
+enum enGrtertib { smolllitter = 1, captellliter = 2, sbshullcharcter = 3, dijet = 4 };
+int ReadRundom(int from, int to)
+{
+	/*funcion gnetor Rendom numper*/
+	int Rendom = rand() % (to - from + 1) + from;
+	return Rendom;
+}
+char getREndom(enGrtertib Grtertaip)
+{
+	switch (Grtertaip)
+	{
+	case enGrtertib::smolllitter:
+	{
+		return char(ReadRundom(97, 122));
+		break;
+	}
+	case enGrtertib::captellliter:
+	{
+		return char(ReadRundom(65, 90));
+		break;
+	}
+	case enGrtertib::sbshullcharcter:
+	{
+		return char(ReadRundom(33, 47));
+		break;
+	}
+	case enGrtertib::dijet:
+		return char(ReadRundom(48, 57));
+		break;
+	}
+
+}
+int Readpostivenumper(string maseg)
+{
+	int numper;
+	do
+	{
+		cout << maseg << endl;
+		cin >> numper;
+
+		return numper;
+
+	} while (numper <= 0);
+}
+string Gnerterword(enGrtertib charertype, short Length)
+{
+	string word = "";
+	for (int i = 1; i <= Length; i++)
+	{
+		word = word = getREndom(charertype);
+
+
+
+	}
+
+
+	return word;
+
+}
+string Grtertype()
+{
+	string Kay = "";
+	
+	Kay = Gnerterword(enGrtertib::captellliter, 4) + "-";
+	Kay =Kay+ Gnerterword(enGrtertib::captellliter, 4) + "-";
+	Kay =Kay+ Gnerterword(enGrtertib::captellliter, 4) + "-";
+	Kay =Kay+ Gnerterword(enGrtertib::captellliter, 4);
+	
+
+
+	return Kay;
+
+}
+void GrereterKays(short numperkays)
+{
+
+	for (int i = 1; i <= numperkays; i++)
+	{
+		cout << "Kay[" << i << "]";
+		cout << Grtertype() << endl;
+
+
+
+	}
+
+}
+int main()
+{
+	srand((unsigned)time(NULL));
+
+	GrereterKays(Readpostivenumper("pless Enter Kay"));
+
+	return 0;
+
+}
