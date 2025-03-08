@@ -1,0 +1,119 @@
+#include<iostream>
+
+using namespace std;
+int ReadRundom(int from, int to)
+
+
+
+{
+
+
+	/*funcion gnetor Rendom numper*/
+
+
+	int Rendom = rand() % (to - from + 1) + from;
+
+
+	return Rendom;
+}
+
+
+void   Readarr(int arr[100], int& arrLength)
+{
+	cout << " \n pless enter numper Elment\n";
+	cin >> arrLength;
+
+
+
+
+	for (int i = 0; i < arrLength; i++)
+	{
+		arr[i] = ReadRundom(1, 100);
+
+
+
+		cout << endl;
+
+	}
+
+
+
+
+
+
+
+}
+
+
+
+void printarr(int arr[100], int arrLength)
+{
+
+	for (int i = 0; i < arrLength; i++)
+	{
+
+		cout << arr[i] << "\t";
+
+
+
+
+
+
+	}
+
+
+
+
+}
+
+int sumnumper(int arr[100], int arrLength)
+{
+	int sum = 0;
+
+	for (int i = 0; i < arrLength; i++)
+	{
+
+		sum = sum += arr[i];
+		
+
+
+	}
+	
+
+	return sum;
+
+
+
+
+}
+
+
+
+
+int main()
+{
+
+	srand((unsigned)time(NULL));
+
+	int arr[100], arrLength;
+
+
+
+
+	Readarr(arr, arrLength);
+
+
+	cout << "Area Elemnt";
+	printarr(arr, arrLength);
+	cout << "\n sum numper=" << " ";
+	cout << sumnumper(arr, arrLength);
+	return 0;
+
+
+
+
+
+
+
+
+}
