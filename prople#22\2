@@ -1,0 +1,136 @@
+#include<iostream>
+
+using namespace std;
+
+int Readpostivenumper(string maseg)
+{
+	int numper;
+	do
+	{
+		cout << maseg << endl;
+		cin >> numper;
+
+
+
+
+	} while (numper <= 0);
+
+
+	return numper;
+
+}
+
+
+void Readarr(int arr[100], int &arrLength)
+{
+	cout << " \n pless enter numper Elment\n";
+	cin >> arrLength;
+
+
+	cout << "\n pless Enter Elemnt arr\n";
+
+	for (int i = 0; i < arrLength; i++)
+	{
+		cout << "Elemnt[" << i+1 << "]:";
+		cin >> arr[i];
+
+
+
+		cout << endl;
+
+	}
+
+
+
+
+
+
+
+}
+
+
+
+void printarr(int arr[100], int arrLength)
+{
+
+	for (int i = 0; i < arrLength; i++)
+	{
+
+		cout << arr[i] << "\t";
+
+
+		
+
+
+
+	}
+
+
+
+
+}
+
+
+
+int timrpeted(int numper, int arr[100], int arrLength)
+{
+	int count = 0;
+
+
+	for (int i = 0; i<=arrLength -1; i++)
+	{
+
+		if (numper == arr[i])
+		{
+			count++;
+
+
+		}
+
+
+
+	
+
+	}
+
+
+
+	return count;
+
+
+
+}
+
+
+
+int main()
+{
+	int arr[100], arrLength, numpertocheK;
+
+	Readarr(arr, arrLength);
+
+	numpertocheK = Readpostivenumper("pless Enter numper to cheK");
+
+
+	cout << "\n orgenl array" << "  ";
+	printarr(arr, arrLength);
+
+
+	cout << "\n numper"<<"  " << numpertocheK;
+	cout << "is rpeted" << "  ";
+
+	cout<<timrpeted(numpertocheK, arr, arrLength)<<"  " << "tims(s)\n";
+
+
+
+
+	return 0;
+
+
+
+
+
+
+
+
+}
