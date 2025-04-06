@@ -1,0 +1,86 @@
+#include<iostream>
+using namespace std;
+int Readpostivenumper(string maseg)
+{
+	int numper;
+	do
+	{
+		cout << maseg << endl;
+		cin >> numper;
+
+
+
+
+
+
+	} while (numper <= 0);
+
+	return numper;
+
+}
+
+void printArea(int arr[100], int arrLength)
+{
+
+	for (int i = 0; i < arrLength; i++)
+	{
+
+		cout << arr[i] << "";
+
+
+		cout << endl;
+	}
+
+
+}
+void AddAreaElemnt(int numper, int arr[100], int &arrLength )
+{
+	arrLength++;
+	arr[arrLength - 1] = numper;
+
+
+}
+void ReadAtrea(int arr[100], int &arrLength)
+{
+
+	int Addmor = true;
+	do
+	{
+
+
+		AddAreaElemnt(Readpostivenumper("Enter numper Elemnt"), arr, arrLength);
+
+
+		cout << "Do yo odd mor numper [1] yes,[0] No" << endl;
+		cin >> Addmor;
+
+
+
+
+
+	} while (Addmor);
+
+}
+
+
+int main()
+{
+	int arr[100];
+	int arrLength = 0;
+
+
+	ReadAtrea(arr, arrLength);
+
+
+	cout << "Area elemnt Length" << arrLength<<" " << endl;
+	cout << "Area Elemnt";
+	printArea(arr, arrLength);
+
+
+
+
+
+
+	return 0;
+
+}
